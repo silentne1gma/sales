@@ -1,0 +1,139 @@
+:root{
+    --red:#FE5F55;
+    --fonts:#F7F7FF;
+    --faded-blue:#BDD5EA;
+    --blue:#577399;
+    --dark-blue:#495867;
+}
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+body{
+    font-family: 'Poppins', sans-serif;
+    color:var(--fonts);
+    background:var(--dark-blue);
+}
+
+nav{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    height: 60px;
+    width:100%;
+    color:var(--fonts);
+    background:var(--blue);
+    transition: .2s ease-in-out;
+}
+
+nav:hover{
+    color: var(--faded-blue);
+    background-color: var(--blue);
+    transition: .2s ease-in-out;
+}
+
+
+#logo{
+    transition: .5s ease;
+    font-weight: 900;
+}
+
+#logo:hover{
+    transform: rotate(360deg);
+    transition: .5s ease;
+}
+
+#main{
+    padding: 50px 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.modal, .modal-main {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+.modal{
+    display: none;
+    justify-content: center;
+    position: fixed;
+    top:0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background: rgba(0, 0, 0, .7);
+}
+
+.modal-main{
+    justify-content: space-between;
+    background:var(--dark-blue);
+    width: 400px;
+    height: 500px;
+}
+
+.modal-header{
+    width:100%;
+    display: flex;
+    justify-content: flex-end;
+
+}
+.modal-content {
+    height: 80%;
+    width:100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-direction: column;
+}
+.modal-content input{
+    width: 300px;
+    padding: 3px 15px;
+}
+.btn, .close-btn{
+    font-family: 'Poppins', sans-serif;
+}
+.close-btn{
+    padding:3px 20px;
+    outline:none;
+    border: none;
+}
+.close-btn:hover{
+    cursor: pointer;
+    transition: .2s ease-in-out;
+    background: var(--red);
+}
+
+.btn{
+    border: var(--blue) 1px solid;
+    padding:3px 10px;
+    background:var(--fonts);
+    color:var(--dark-blue);
+    transition: .2s ease-in-out;
+
+}
+
+.btn:hover{
+    background:var(--dark-blue);
+    color:var(--fonts);
+    cursor: pointer;
+    transition: .2s ease-in-out;
+}
+
+table{
+    margin-top: 50px;
+    width: 80%;
+}
+table, th, td {
+    border: 1px solid var(--blue);
+    border-collapse: collapse;
+  }
+
+#err{
+    background: var(--red);
+    padding:3px 10px;
+    display: none;
+}

@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="og:title" content="Enigmatic sales thacker">
+    <meta name="og:descreption" content="A minimal Javascript application to thack sales">
+    <meta name="og:image" content="https://upload.wikimedia.org/wikipedia/commons/thumb/6/6d/Charts_SVG_Example_9_-_Stacked_Bar_Chart.svg/1024px-Charts_SVG_Example_9_-_Stacked_Bar_Chart.svg.png">
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="shortcut icon" href="image/favicon.png" type="image/x-icon">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;400&display=swap" rel="stylesheet"> 
+    <title>Enigmatic Sales tracker</title>
+</head>
+<body>
+    <nav class="navbar">
+        <p id="logo" class="nav-link">Enigmatic Sales tracker</p>
+        <p id="#chart-btn" class="btn modal-btn" class="nav-link">Charts</p>
+    </nav>
+
+
+    <div id="main">
+        <button id="addProduct" class="btn modal-btn">Add a new Product</button>
+        <table id="table">
+            <tr>
+                <th>Product name</th>
+                <th>Number of sales</th>
+            </tr>
+        </table>
+
+
+    </div>
+
+    <div class="modal">
+        <div class="modal-main">
+            <div class="modal-header">
+                <button id="modal-header-btn" class="close-btn">X</button>
+            </div>
+            <div class="modal-content">
+                <canvas id="myChart"></canvas>
+            </div>
+        </div>
+    </div>
+
+
+
+        <div class="modal">
+            <div class="modal-main">
+                <div class="modal-header">
+                    <button id="modal-header-btn" class="close-btn">X</button>
+                </div>
+    
+                <div class="modal-content">
+                    <input type="text" id="productName" placeholder="what's the name of your product?">
+                    <p id="err"></p>
+                    <button class="btn" id="add-btn">Add Product</button>
+                </div>
+            </div>
+        </div>
+
+
+
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@2.9.4/dist/Chart.min.js"></script>
+    <script src="js/app.js"></script>
+</body>
+</html>
