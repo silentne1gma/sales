@@ -130,7 +130,25 @@ table{
 table, th, td {
     border: 1px solid var(--blue);
     border-collapse: collapse;
-  }
+    text-align: center;
+}
+#numberOfSales{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+#sub, #add{
+    padding:3px 20px;
+    color:var(--fonts);
+    border: none;
+}
+#sub{
+    background: var(--red);
+}
+#add{
+    background: var(--blue);
+}
 
 #err{
     background: var(--red);

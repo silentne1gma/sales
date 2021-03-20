@@ -30,17 +30,29 @@ addBtn.addEventListener('click', ()=>{
         const numberOfSales = document.createElement("td");
         numberOfSales.setAttribute("id", "numberOfSales");
         // make a 2x btns + and - in the number sales div
-        numberOfSales.innerHTML = "<button id='sub'>+</button> <p id='number'>0 </p> <button id='add'>+</button>" 
+        numberOfSales.innerHTML = "<button id='sub'>-</button> <p id='number'></p> <button id='add'>+</button>" 
         // make a td element that has the product name
         const tr = document.createElement('tr');
         table.appendChild(tr)
         tr.appendChild(Name)
         tr.appendChild(numberOfSales)
+        productName.value = "";
+        modal[1].style.display = "none"
         // add event listner to add or sustract a product
-
-        // make a modal
-
-        // add a product name and press ok buttn
+        const sub = document.getElementById('sub')
+        const add = document.getElementById('add')
+        const number = document.getElementById('number')     
+        number.innerText = 0
+        console.log(sub)
+        console.log(number)
+        sub.addEventListener('click', ()=>{
+            number.innerText-=1
+        })
+        add.addEventListener('click', ()=>{
+            console.log(number.innerText)
+            number.innerText = parseInt(number.innerText) + 1
+            console.log(number.innerText) 
+        })
     }
 })
 
