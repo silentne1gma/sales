@@ -58,5 +58,33 @@ addBtn.addEventListener('click', ()=>{
         }
     }
 })
+const canvas = document.getElementById('myChart');
+const numbers = document.getElementsByClassName('number');
+let dataArray = [];
+for(let i = 0; i< numbers.length; i++){
+    dataArray.push(numbers[i].innerText)
+}
 
 
+var myBarChart = new Chart(canvas, {
+    type: 'bar',
+    data: {
+        datasets: [{
+            barPercentage: 0.5,
+            barThickness: 6,
+            maxBarThickness: 8,
+            minBarLength: 2,
+            data: dataArray 
+        }]
+    },
+    options: {
+        scales: {
+            xAxes: [{
+                gridLines: {
+                    offsetGridLines: true
+                }
+            }]
+        }
+    }
+
+});

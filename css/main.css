@@ -71,8 +71,8 @@ nav:hover{
 .modal-main{
     justify-content: space-between;
     background:var(--dark-blue);
-    width: 400px;
-    height: 500px;
+    width: 500px;
+    height: 600px;
 }
 
 .modal-header{
@@ -154,4 +154,9 @@ table, th, td {
     background: var(--red);
     padding:3px 10px;
     display: none;
+}
+
+#myChart{
+    width:300px;
+    height: 400px;
 }
